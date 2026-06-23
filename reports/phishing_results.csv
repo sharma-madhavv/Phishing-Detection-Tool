@@ -1,0 +1,11 @@
+source_file,subject,from,from_domain,to,date,risk_score,risk_tier,indicator_count,url_count,attachment_count,ground_truth_label,top_indicators
+sample_emails_dataset.csv,Your Microsoft 365 subscription is expiring,billing@microsoft-renew.top,microsoft-renew.top,,,72,HIGH,6,1,0,phishing,lookalike_domain; suspicious_tld; lookalike_link_domain; suspicious_link_tld; urgency_language
+sample_emails_dataset.csv,Verify your account now or it will be suspended,support@secure-bank-alert.com,secure-bank-alert.com,,,67,HIGH,6,1,0,phishing,url_shortener; sender_link_domain_mismatch; urgency_language; credential_harvesting_language; generic_greeting
+sample_emails_dataset.csv,Confirm your Apple ID for security purposes,appleid@apple-secure-id.info,apple-secure-id.info,,,66,HIGH,5,1,0,phishing,lookalike_domain; suspicious_tld; lookalike_link_domain; suspicious_link_tld; generic_greeting
+sample_emails_dataset.csv,Your package delivery failed,delivery@dhl-tracking-update.click,dhl-tracking-update.click,,,66,HIGH,5,1,0,phishing,lookalike_domain; suspicious_tld; lookalike_link_domain; suspicious_link_tld; vague_cta_link_text
+sample_emails_dataset.csv,URGENT: Wire transfer required today,ceo.office@companymail-secure.net,companymail-secure.net,,,59,HIGH,3,0,0,phishing,urgency_language; credential_harvesting_language; bec_style_request
+sample_emails_dataset.csv,You've won a $1000 Walmart gift card!,promo@walmart-rewards.club,walmart-rewards.club,,,35,MEDIUM,2,1,0,phishing,financial_bait; lottery_prize_bait
+sample_emails_dataset.csv,Weekly team standup notes,sarah.lee@example.com,example.com,,,0,MINIMAL,0,0,0,legitimate,
+sample_emails_dataset.csv,Invoice #4521 from Acme Corp,billing@acmecorp.com,acmecorp.com,,,0,MINIMAL,0,0,0,legitimate,
+sample_emails_dataset.csv,Reminder: Dentist appointment tomorrow,reminders@dentalcareplus.com,dentalcareplus.com,,,0,MINIMAL,0,0,0,legitimate,
+sample_emails_dataset.csv,Quarterly newsletter - June 2026,newsletter@example.org,example.org,,,0,MINIMAL,0,0,0,legitimate,

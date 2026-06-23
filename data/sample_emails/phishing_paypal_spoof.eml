@@ -1,0 +1,34 @@
+From: "PayPal Security" <security-alert@paypa1-verify.com>
+To: victim@example.com
+Subject: Urgent: Your Account Has Been Suspended - Verify Now
+Date: Mon, 15 Jun 2026 09:23:11 +0000
+Message-ID: <a1b2c3d4@paypa1-verify.com>
+Reply-To: support@account-recover.tk
+Return-Path: <bounce@randomxyz123.top>
+Received: from mail.randomxyz123.top (unknown [185.220.101.45])
+	by mx.example.com with ESMTP id abc123;
+	Mon, 15 Jun 2026 09:23:10 +0000
+Received-SPF: fail (mx.example.com: domain of paypa1-verify.com does not designate 185.220.101.45 as permitted sender)
+Authentication-Results: mx.example.com; spf=fail smtp.mailfrom=paypa1-verify.com; dkim=fail; dmarc=fail
+X-Mailer: PHPMailer 6.1
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+<p>Dear Customer,</p>
+
+<p>We have noticed unusual activity on your account. Your account has been suspended
+due to suspicious login attempts. You must verify your identity immediately or your
+account will be permanently closed within 24 hours.</p>
+
+<p><b>Act now to avoid losing access!</b></p>
+
+<p><a href="http://185.220.101.45/paypal-verify/login.php">www.paypal.com/verify-account</a></p>
+
+<p>Please confirm your password and update your payment details to restore full access.
+Failure to comply will result in permanent suspension.</p>
+
+<p>Thank you,<br>
+PayPal Security Team</p>
+</body>
+</html>

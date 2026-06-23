@@ -1,0 +1,24 @@
+From: "IT Helpdesk" <it.helpdesk@gmail.com>
+To: employee@example.com
+Subject: ACTION REQUIRED!!! Mailbox Storage Full - Validate Your Account
+Date: Wed, 17 Jun 2026 14:02:00 +0000
+Message-ID: <xyz789@gmail.com>
+Reply-To: itsupport-helpdesk@mail.com
+Received-SPF: softfail
+Authentication-Results: mx.example.com; spf=softfail; dkim=fail
+Content-Type: text/plain; charset="UTF-8"
+
+Dear User,
+
+YOUR MAILBOX IS FULL!!! You will not be able to send or receive emails until you
+validate your account. This is your FINAL NOTICE.
+
+Click here immediately to verify your account: http://bit.ly/3xKj9Lm
+
+Please enter your username and password to confirm your identity and restore your
+mailbox storage. This must be completed within 24 hours or your account will be
+restricted.
+
+IMMEDIATE ATTENTION REQUIRED!!!
+
+IT Helpdesk Team

@@ -1,0 +1,21 @@
+From: "Jane Smith" <jane.smith@example.com>
+To: team@example.com
+Subject: Notes from today's project sync
+Date: Mon, 15 Jun 2026 16:40:00 +0000
+Message-ID: <notes0615@example.com>
+Authentication-Results: mx.example.com; spf=pass smtp.mailfrom=example.com; dkim=pass; dmarc=pass
+Received-SPF: pass
+Content-Type: text/plain; charset="UTF-8"
+
+Hi team,
+
+Quick recap from today's sync:
+
+- Backend migration is on track for Friday
+- Sarah will share the updated design doc tomorrow
+- Let's revisit the Q3 roadmap on Wednesday
+
+Let me know if I missed anything.
+
+Thanks,
+Jane

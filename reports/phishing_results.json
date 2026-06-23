@@ -1,0 +1,681 @@
+{
+  "summary": {
+    "total_emails": 10,
+    "average_risk_score": 36.5,
+    "tier_breakdown": {
+      "HIGH": 5,
+      "MEDIUM": 1,
+      "MINIMAL": 4
+    },
+    "top_indicators": [
+      [
+        "lookalike_domain",
+        3
+      ],
+      [
+        "suspicious_tld",
+        3
+      ],
+      [
+        "lookalike_link_domain",
+        3
+      ],
+      [
+        "suspicious_link_tld",
+        3
+      ],
+      [
+        "urgency_language",
+        3
+      ],
+      [
+        "generic_greeting",
+        3
+      ],
+      [
+        "credential_harvesting_language",
+        2
+      ],
+      [
+        "vague_cta_link_text",
+        2
+      ],
+      [
+        "url_shortener",
+        1
+      ],
+      [
+        "sender_link_domain_mismatch",
+        1
+      ]
+    ],
+    "category_breakdown": {
+      "sender": 6,
+      "url": 8,
+      "body": 13
+    },
+    "accuracy_vs_labels": {
+      "labeled_count": 10,
+      "correct": 9,
+      "accuracy_pct": 90.0
+    }
+  },
+  "results": [
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-3",
+      "subject": "Your Microsoft 365 subscription is expiring",
+      "from": "billing@microsoft-renew.top",
+      "from_domain": "microsoft-renew.top",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 72,
+      "risk_tier": "HIGH",
+      "indicator_count": 6,
+      "indicators": [
+        {
+          "category": "sender",
+          "name": "lookalike_domain",
+          "description": "Sending domain 'microsoft-renew.top' closely resembles brand 'microsoft' (possible typosquatting / homoglyph domain).",
+          "weight": 25,
+          "evidence": "microsoft-renew.top"
+        },
+        {
+          "category": "sender",
+          "name": "suspicious_tld",
+          "description": "Sender domain uses an uncommon/high-abuse TLD ('.top').",
+          "weight": 12,
+          "evidence": "microsoft-renew.top"
+        },
+        {
+          "category": "url",
+          "name": "lookalike_link_domain",
+          "description": "Link domain resembles brand 'microsoft' but isn't the real domain (typosquat pattern).",
+          "weight": 25,
+          "evidence": "http://microsoft-renew.top/billing/update"
+        },
+        {
+          "category": "url",
+          "name": "suspicious_link_tld",
+          "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+          "weight": 12,
+          "evidence": "http://microsoft-renew.top/billing/update"
+        },
+        {
+          "category": "body",
+          "name": "urgency_language",
+          "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"update your payment\").",
+          "weight": 12,
+          "evidence": "update your payment"
+        },
+        {
+          "category": "body",
+          "name": "generic_greeting",
+          "description": "Uses a generic, non-personalized greeting (\"dear user\") instead of the recipient's name.",
+          "weight": 8,
+          "evidence": "dear user"
+        }
+      ],
+      "indicators_by_category": {
+        "sender": [
+          {
+            "category": "sender",
+            "name": "lookalike_domain",
+            "description": "Sending domain 'microsoft-renew.top' closely resembles brand 'microsoft' (possible typosquatting / homoglyph domain).",
+            "weight": 25,
+            "evidence": "microsoft-renew.top"
+          },
+          {
+            "category": "sender",
+            "name": "suspicious_tld",
+            "description": "Sender domain uses an uncommon/high-abuse TLD ('.top').",
+            "weight": 12,
+            "evidence": "microsoft-renew.top"
+          }
+        ],
+        "url": [
+          {
+            "category": "url",
+            "name": "lookalike_link_domain",
+            "description": "Link domain resembles brand 'microsoft' but isn't the real domain (typosquat pattern).",
+            "weight": 25,
+            "evidence": "http://microsoft-renew.top/billing/update"
+          },
+          {
+            "category": "url",
+            "name": "suspicious_link_tld",
+            "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+            "weight": 12,
+            "evidence": "http://microsoft-renew.top/billing/update"
+          }
+        ],
+        "body": [
+          {
+            "category": "body",
+            "name": "urgency_language",
+            "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"update your payment\").",
+            "weight": 12,
+            "evidence": "update your payment"
+          },
+          {
+            "category": "body",
+            "name": "generic_greeting",
+            "description": "Uses a generic, non-personalized greeting (\"dear user\") instead of the recipient's name.",
+            "weight": 8,
+            "evidence": "dear user"
+          }
+        ]
+      },
+      "url_count": 1,
+      "attachment_count": 0,
+      "urls": [
+        "http://microsoft-renew.top/billing/update"
+      ],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-0",
+      "subject": "Verify your account now or it will be suspended",
+      "from": "support@secure-bank-alert.com",
+      "from_domain": "secure-bank-alert.com",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 67,
+      "risk_tier": "HIGH",
+      "indicator_count": 6,
+      "indicators": [
+        {
+          "category": "url",
+          "name": "url_shortener",
+          "description": "Email contains 1 shortened URL(s) which obscure the real destination.",
+          "weight": 15,
+          "evidence": "http://bit.ly/2KdjX9"
+        },
+        {
+          "category": "url",
+          "name": "sender_link_domain_mismatch",
+          "description": "None of the links in the email point back to the sender's own domain.",
+          "weight": 10,
+          "evidence": "http://bit.ly/2KdjX9"
+        },
+        {
+          "category": "body",
+          "name": "urgency_language",
+          "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"verify your account\").",
+          "weight": 20,
+          "evidence": "verify your account; unusual activity; suspended"
+        },
+        {
+          "category": "body",
+          "name": "credential_harvesting_language",
+          "description": "Requests sensitive credentials or financial information (e.g. \"enter your password\").",
+          "weight": 25,
+          "evidence": "enter your password; ssn"
+        },
+        {
+          "category": "body",
+          "name": "generic_greeting",
+          "description": "Uses a generic, non-personalized greeting (\"dear customer\") instead of the recipient's name.",
+          "weight": 8,
+          "evidence": "dear customer"
+        },
+        {
+          "category": "body",
+          "name": "vague_cta_link_text",
+          "description": "Uses vague call-to-action link text ('Click here' / 'Verify now') instead of showing the real destination.",
+          "weight": 8,
+          "evidence": ""
+        }
+      ],
+      "indicators_by_category": {
+        "url": [
+          {
+            "category": "url",
+            "name": "url_shortener",
+            "description": "Email contains 1 shortened URL(s) which obscure the real destination.",
+            "weight": 15,
+            "evidence": "http://bit.ly/2KdjX9"
+          },
+          {
+            "category": "url",
+            "name": "sender_link_domain_mismatch",
+            "description": "None of the links in the email point back to the sender's own domain.",
+            "weight": 10,
+            "evidence": "http://bit.ly/2KdjX9"
+          }
+        ],
+        "body": [
+          {
+            "category": "body",
+            "name": "urgency_language",
+            "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"verify your account\").",
+            "weight": 20,
+            "evidence": "verify your account; unusual activity; suspended"
+          },
+          {
+            "category": "body",
+            "name": "credential_harvesting_language",
+            "description": "Requests sensitive credentials or financial information (e.g. \"enter your password\").",
+            "weight": 25,
+            "evidence": "enter your password; ssn"
+          },
+          {
+            "category": "body",
+            "name": "generic_greeting",
+            "description": "Uses a generic, non-personalized greeting (\"dear customer\") instead of the recipient's name.",
+            "weight": 8,
+            "evidence": "dear customer"
+          },
+          {
+            "category": "body",
+            "name": "vague_cta_link_text",
+            "description": "Uses vague call-to-action link text ('Click here' / 'Verify now') instead of showing the real destination.",
+            "weight": 8,
+            "evidence": ""
+          }
+        ]
+      },
+      "url_count": 1,
+      "attachment_count": 0,
+      "urls": [
+        "http://bit.ly/2KdjX9"
+      ],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-5",
+      "subject": "Confirm your Apple ID for security purposes",
+      "from": "appleid@apple-secure-id.info",
+      "from_domain": "apple-secure-id.info",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 66,
+      "risk_tier": "HIGH",
+      "indicator_count": 5,
+      "indicators": [
+        {
+          "category": "sender",
+          "name": "lookalike_domain",
+          "description": "Sending domain 'apple-secure-id.info' closely resembles brand 'apple' (possible typosquatting / homoglyph domain).",
+          "weight": 25,
+          "evidence": "apple-secure-id.info"
+        },
+        {
+          "category": "sender",
+          "name": "suspicious_tld",
+          "description": "Sender domain uses an uncommon/high-abuse TLD ('.info').",
+          "weight": 12,
+          "evidence": "apple-secure-id.info"
+        },
+        {
+          "category": "url",
+          "name": "lookalike_link_domain",
+          "description": "Link domain resembles brand 'apple' but isn't the real domain (typosquat pattern).",
+          "weight": 25,
+          "evidence": "http://apple-secure-id.info/verify"
+        },
+        {
+          "category": "url",
+          "name": "suspicious_link_tld",
+          "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+          "weight": 12,
+          "evidence": "http://apple-secure-id.info/verify"
+        },
+        {
+          "category": "body",
+          "name": "generic_greeting",
+          "description": "Uses a generic, non-personalized greeting (\"dear customer\") instead of the recipient's name.",
+          "weight": 8,
+          "evidence": "dear customer"
+        }
+      ],
+      "indicators_by_category": {
+        "sender": [
+          {
+            "category": "sender",
+            "name": "lookalike_domain",
+            "description": "Sending domain 'apple-secure-id.info' closely resembles brand 'apple' (possible typosquatting / homoglyph domain).",
+            "weight": 25,
+            "evidence": "apple-secure-id.info"
+          },
+          {
+            "category": "sender",
+            "name": "suspicious_tld",
+            "description": "Sender domain uses an uncommon/high-abuse TLD ('.info').",
+            "weight": 12,
+            "evidence": "apple-secure-id.info"
+          }
+        ],
+        "url": [
+          {
+            "category": "url",
+            "name": "lookalike_link_domain",
+            "description": "Link domain resembles brand 'apple' but isn't the real domain (typosquat pattern).",
+            "weight": 25,
+            "evidence": "http://apple-secure-id.info/verify"
+          },
+          {
+            "category": "url",
+            "name": "suspicious_link_tld",
+            "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+            "weight": 12,
+            "evidence": "http://apple-secure-id.info/verify"
+          }
+        ],
+        "body": [
+          {
+            "category": "body",
+            "name": "generic_greeting",
+            "description": "Uses a generic, non-personalized greeting (\"dear customer\") instead of the recipient's name.",
+            "weight": 8,
+            "evidence": "dear customer"
+          }
+        ]
+      },
+      "url_count": 1,
+      "attachment_count": 0,
+      "urls": [
+        "http://apple-secure-id.info/verify"
+      ],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-8",
+      "subject": "Your package delivery failed",
+      "from": "delivery@dhl-tracking-update.click",
+      "from_domain": "dhl-tracking-update.click",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 66,
+      "risk_tier": "HIGH",
+      "indicator_count": 5,
+      "indicators": [
+        {
+          "category": "sender",
+          "name": "lookalike_domain",
+          "description": "Sending domain 'dhl-tracking-update.click' closely resembles brand 'dhl' (possible typosquatting / homoglyph domain).",
+          "weight": 25,
+          "evidence": "dhl-tracking-update.click"
+        },
+        {
+          "category": "sender",
+          "name": "suspicious_tld",
+          "description": "Sender domain uses an uncommon/high-abuse TLD ('.click').",
+          "weight": 12,
+          "evidence": "dhl-tracking-update.click"
+        },
+        {
+          "category": "url",
+          "name": "lookalike_link_domain",
+          "description": "Link domain resembles brand 'dhl' but isn't the real domain (typosquat pattern).",
+          "weight": 25,
+          "evidence": "http://dhl-tracking-update.click/reschedule"
+        },
+        {
+          "category": "url",
+          "name": "suspicious_link_tld",
+          "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+          "weight": 12,
+          "evidence": "http://dhl-tracking-update.click/reschedule"
+        },
+        {
+          "category": "body",
+          "name": "vague_cta_link_text",
+          "description": "Uses vague call-to-action link text ('Click here' / 'Verify now') instead of showing the real destination.",
+          "weight": 8,
+          "evidence": ""
+        }
+      ],
+      "indicators_by_category": {
+        "sender": [
+          {
+            "category": "sender",
+            "name": "lookalike_domain",
+            "description": "Sending domain 'dhl-tracking-update.click' closely resembles brand 'dhl' (possible typosquatting / homoglyph domain).",
+            "weight": 25,
+            "evidence": "dhl-tracking-update.click"
+          },
+          {
+            "category": "sender",
+            "name": "suspicious_tld",
+            "description": "Sender domain uses an uncommon/high-abuse TLD ('.click').",
+            "weight": 12,
+            "evidence": "dhl-tracking-update.click"
+          }
+        ],
+        "url": [
+          {
+            "category": "url",
+            "name": "lookalike_link_domain",
+            "description": "Link domain resembles brand 'dhl' but isn't the real domain (typosquat pattern).",
+            "weight": 25,
+            "evidence": "http://dhl-tracking-update.click/reschedule"
+          },
+          {
+            "category": "url",
+            "name": "suspicious_link_tld",
+            "description": "1 link(s) use high-risk/uncommon TLDs often abused for phishing.",
+            "weight": 12,
+            "evidence": "http://dhl-tracking-update.click/reschedule"
+          }
+        ],
+        "body": [
+          {
+            "category": "body",
+            "name": "vague_cta_link_text",
+            "description": "Uses vague call-to-action link text ('Click here' / 'Verify now') instead of showing the real destination.",
+            "weight": 8,
+            "evidence": ""
+          }
+        ]
+      },
+      "url_count": 1,
+      "attachment_count": 0,
+      "urls": [
+        "http://dhl-tracking-update.click/reschedule"
+      ],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-7",
+      "subject": "URGENT: Wire transfer required today",
+      "from": "ceo.office@companymail-secure.net",
+      "from_domain": "companymail-secure.net",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 59,
+      "risk_tier": "HIGH",
+      "indicator_count": 3,
+      "indicators": [
+        {
+          "category": "body",
+          "name": "urgency_language",
+          "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"time sensitive\").",
+          "weight": 16,
+          "evidence": "time sensitive; before the bank closes"
+        },
+        {
+          "category": "body",
+          "name": "credential_harvesting_language",
+          "description": "Requests sensitive credentials or financial information (e.g. \"wire transfer\").",
+          "weight": 20,
+          "evidence": "wire transfer"
+        },
+        {
+          "category": "body",
+          "name": "bec_style_request",
+          "description": "Language pattern consistent with Business Email Compromise (BEC) / CEO-fraud requests (e.g. \"wire transfer\", \"urgent wire\") \u2014 urgent, confidential financial requests with no links or attachments, relying purely on social engineering.",
+          "weight": 30,
+          "evidence": "wire transfer; urgent wire; send the account details; i need you to process"
+        }
+      ],
+      "indicators_by_category": {
+        "body": [
+          {
+            "category": "body",
+            "name": "urgency_language",
+            "description": "Uses urgency/pressure language commonly seen in phishing (e.g. \"time sensitive\").",
+            "weight": 16,
+            "evidence": "time sensitive; before the bank closes"
+          },
+          {
+            "category": "body",
+            "name": "credential_harvesting_language",
+            "description": "Requests sensitive credentials or financial information (e.g. \"wire transfer\").",
+            "weight": 20,
+            "evidence": "wire transfer"
+          },
+          {
+            "category": "body",
+            "name": "bec_style_request",
+            "description": "Language pattern consistent with Business Email Compromise (BEC) / CEO-fraud requests (e.g. \"wire transfer\", \"urgent wire\") \u2014 urgent, confidential financial requests with no links or attachments, relying purely on social engineering.",
+            "weight": 30,
+            "evidence": "wire transfer; urgent wire; send the account details; i need you to process"
+          }
+        ]
+      },
+      "url_count": 0,
+      "attachment_count": 0,
+      "urls": [],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-1",
+      "subject": "You've won a $1000 Walmart gift card!",
+      "from": "promo@walmart-rewards.club",
+      "from_domain": "walmart-rewards.club",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "phishing",
+      "risk_score": 35,
+      "risk_tier": "MEDIUM",
+      "indicator_count": 2,
+      "indicators": [
+        {
+          "category": "body",
+          "name": "financial_bait",
+          "description": "References a financial reward, prize, lottery, or unexpected sum of money \u2014 classic bait pattern.",
+          "weight": 12,
+          "evidence": ""
+        },
+        {
+          "category": "body",
+          "name": "lottery_prize_bait",
+          "description": "Uses prize/lottery/giveaway bait language (e.g. \"you've won\") to lure clicks.",
+          "weight": 25,
+          "evidence": "you've won; congratulations! you; claim your prize"
+        }
+      ],
+      "indicators_by_category": {
+        "body": [
+          {
+            "category": "body",
+            "name": "financial_bait",
+            "description": "References a financial reward, prize, lottery, or unexpected sum of money \u2014 classic bait pattern.",
+            "weight": 12,
+            "evidence": ""
+          },
+          {
+            "category": "body",
+            "name": "lottery_prize_bait",
+            "description": "Uses prize/lottery/giveaway bait language (e.g. \"you've won\") to lure clicks.",
+            "weight": 25,
+            "evidence": "you've won; congratulations! you; claim your prize"
+          }
+        ]
+      },
+      "url_count": 1,
+      "attachment_count": 0,
+      "urls": [
+        "http://walmart-rewards.club/claim"
+      ],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-2",
+      "subject": "Weekly team standup notes",
+      "from": "sarah.lee@example.com",
+      "from_domain": "example.com",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "legitimate",
+      "risk_score": 0,
+      "risk_tier": "MINIMAL",
+      "indicator_count": 0,
+      "indicators": [],
+      "indicators_by_category": {},
+      "url_count": 0,
+      "attachment_count": 0,
+      "urls": [],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-4",
+      "subject": "Invoice #4521 from Acme Corp",
+      "from": "billing@acmecorp.com",
+      "from_domain": "acmecorp.com",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "legitimate",
+      "risk_score": 0,
+      "risk_tier": "MINIMAL",
+      "indicator_count": 0,
+      "indicators": [],
+      "indicators_by_category": {},
+      "url_count": 0,
+      "attachment_count": 0,
+      "urls": [],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-6",
+      "subject": "Reminder: Dentist appointment tomorrow",
+      "from": "reminders@dentalcareplus.com",
+      "from_domain": "dentalcareplus.com",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "legitimate",
+      "risk_score": 0,
+      "risk_tier": "MINIMAL",
+      "indicator_count": 0,
+      "indicators": [],
+      "indicators_by_category": {},
+      "url_count": 0,
+      "attachment_count": 0,
+      "urls": [],
+      "attachments": []
+    },
+    {
+      "source_file": "sample_emails_dataset.csv",
+      "message_id": "csv-row-9",
+      "subject": "Quarterly newsletter - June 2026",
+      "from": "newsletter@example.org",
+      "from_domain": "example.org",
+      "to": "",
+      "date": "",
+      "ground_truth_label": "legitimate",
+      "risk_score": 0,
+      "risk_tier": "MINIMAL",
+      "indicator_count": 0,
+      "indicators": [],
+      "indicators_by_category": {},
+      "url_count": 0,
+      "attachment_count": 0,
+      "urls": [],
+      "attachments": []
+    }
+  ]
+}
