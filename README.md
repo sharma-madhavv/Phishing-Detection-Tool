@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ Phishing Email Detection Tool
 
 A header + body analysis tool for detecting phishing indicators in email datasets. Built to **collect, analyze, classify, and document** phishing email samples — with a CLI for batch processing and a Streamlit dashboard for interactive exploration.
@@ -193,3 +194,22 @@ MIT — see [LICENSE](LICENSE).
 ## ⚠️ Responsible Use
 
 This tool is intended for **defensive security research, education, and email-safety awareness**. Do not use it to develop phishing content. Always handle phishing sample datasets (including any you collect yourself) per your organization's data-handling policy, since they may contain real victim data or malicious payloads.
+=======
+# Phishing-Detection-Tool
+Phishing Email Detection Tool – A Streamlit-based cybersecurity tool that detects phishing emails using header analysis, URL inspection, authentication checks (SPF/DKIM/DMARC), and content-based risk scoring.  It supports EML, MSG, CSV, and ZIP files with detailed reporting and visualization.
+
+##Features
+- Email header analysis
+- SPF/DKIM/DMARC validation
+- URL inspection
+- Risk scoring(0-100)
+- Interactive dashboard
+- Detailed report generation
+- Supports EML , MSG , CSV , and ZIP files
+
+##Tech Stack
+- Python
+- Streamlit
+- Pandas
+- Plotly
+>>>>>>> 3308d6922b6ec420f8bb72fc37f97bf0feb0c119
